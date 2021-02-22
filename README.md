@@ -6,4 +6,4 @@ Programa kaups duomenis apie kelionės agentūrų pardavimus, įvykdytus užsaky
 
 # Pasirinktos technologijos
 
-Programavimui naudosime C# programavimo kalbą. Reliacinių duomenų bazių kūrimui naudosime MagicDraw įrankį, MariaDB valdymo sistemą bei jų duomenų korekcijoms užklausas SQL standartu naudojant phpMyAdmin sistemą.
+ČIA BUS APRAŠYTOS PASIRINKTOS TECHNOLOGIJOS

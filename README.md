@@ -1,1 +1,1 @@
-# pardavimu-administravimo-programa
+# Pardavimų administravimo programa

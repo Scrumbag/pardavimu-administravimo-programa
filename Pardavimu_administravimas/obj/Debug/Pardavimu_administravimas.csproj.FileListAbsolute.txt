@@ -1,0 +1,10 @@
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.exe.config
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.exe
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.pdb
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csprojAssemblyReference.cache
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form1.resources
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Properties.Resources.resources
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csproj.GenerateResource.cache
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csproj.CoreCompileInputs.cache
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.exe
+C:\Users\evald\Desktop\projektas\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.pdb

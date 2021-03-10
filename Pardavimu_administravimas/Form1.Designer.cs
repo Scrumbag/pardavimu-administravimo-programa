@@ -34,6 +34,13 @@ namespace Pardavimu_administravimas
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.failasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.išeitiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testTripsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testTripsDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.testAgencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +64,8 @@ namespace Pardavimu_administravimas
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.failasToolStripMenuItem});
+            this.failasToolStripMenuItem,
+            this.testMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -75,15 +83,72 @@ namespace Pardavimu_administravimas
             // išeitiToolStripMenuItem
             // 
             this.išeitiToolStripMenuItem.Name = "išeitiToolStripMenuItem";
-            this.išeitiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.išeitiToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.išeitiToolStripMenuItem.Text = "Išeiti";
             this.išeitiToolStripMenuItem.Click += new System.EventHandler(this.išeitiToolStripMenuItem_Click);
+            // 
+            // testMenuToolStripMenuItem
+            // 
+            this.testMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testEmployeeToolStripMenuItem,
+            this.testTripsToolStripMenuItem,
+            this.testTripsDestinationToolStripMenuItem,
+            this.testClientToolStripMenuItem,
+            this.testAgencyToolStripMenuItem});
+            this.testMenuToolStripMenuItem.Name = "testMenuToolStripMenuItem";
+            this.testMenuToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.testMenuToolStripMenuItem.Text = "TestMenu";
+            // 
+            // testEmployeeToolStripMenuItem
+            // 
+            this.testEmployeeToolStripMenuItem.Name = "testEmployeeToolStripMenuItem";
+            this.testEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testEmployeeToolStripMenuItem.Text = "TestEmployee";
+            this.testEmployeeToolStripMenuItem.Click += new System.EventHandler(this.testEmployeeToolStripMenuItem_Click);
+            // 
+            // testTripsToolStripMenuItem
+            // 
+            this.testTripsToolStripMenuItem.Name = "testTripsToolStripMenuItem";
+            this.testTripsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testTripsToolStripMenuItem.Text = "TestTrips";
+            this.testTripsToolStripMenuItem.Click += new System.EventHandler(this.testTripsToolStripMenuItem_Click);
+            // 
+            // testTripsDestinationToolStripMenuItem
+            // 
+            this.testTripsDestinationToolStripMenuItem.Name = "testTripsDestinationToolStripMenuItem";
+            this.testTripsDestinationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testTripsDestinationToolStripMenuItem.Text = "TestTripsDestination";
+            this.testTripsDestinationToolStripMenuItem.Click += new System.EventHandler(this.testTripsDestinationToolStripMenuItem_Click);
+            // 
+            // testClientToolStripMenuItem
+            // 
+            this.testClientToolStripMenuItem.Name = "testClientToolStripMenuItem";
+            this.testClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testClientToolStripMenuItem.Text = "TestClient";
+            this.testClientToolStripMenuItem.Click += new System.EventHandler(this.testClientToolStripMenuItem_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(176, 27);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(596, 411);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
+            // 
+            // testAgencyToolStripMenuItem
+            // 
+            this.testAgencyToolStripMenuItem.Name = "testAgencyToolStripMenuItem";
+            this.testAgencyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testAgencyToolStripMenuItem.Text = "TestAgency";
+            this.testAgencyToolStripMenuItem.Click += new System.EventHandler(this.testAgencyToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.uzrasasAgentura);
             this.Controls.Add(this.pasirinkimasAgentura);
             this.Controls.Add(this.menuStrip1);
@@ -104,6 +169,13 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem failasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem išeitiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testEmployeeToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem testTripsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testTripsDestinationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testAgencyToolStripMenuItem;
     }
 }
 

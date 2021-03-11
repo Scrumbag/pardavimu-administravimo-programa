@@ -39,8 +39,10 @@ namespace Pardavimu_administravimas
             this.testTripsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testTripsDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.testAgencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uzrasasAgentas = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,30 +104,37 @@ namespace Pardavimu_administravimas
             // testEmployeeToolStripMenuItem
             // 
             this.testEmployeeToolStripMenuItem.Name = "testEmployeeToolStripMenuItem";
-            this.testEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testEmployeeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.testEmployeeToolStripMenuItem.Text = "TestEmployee";
             this.testEmployeeToolStripMenuItem.Click += new System.EventHandler(this.testEmployeeToolStripMenuItem_Click);
             // 
             // testTripsToolStripMenuItem
             // 
             this.testTripsToolStripMenuItem.Name = "testTripsToolStripMenuItem";
-            this.testTripsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testTripsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.testTripsToolStripMenuItem.Text = "TestTrips";
             this.testTripsToolStripMenuItem.Click += new System.EventHandler(this.testTripsToolStripMenuItem_Click);
             // 
             // testTripsDestinationToolStripMenuItem
             // 
             this.testTripsDestinationToolStripMenuItem.Name = "testTripsDestinationToolStripMenuItem";
-            this.testTripsDestinationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testTripsDestinationToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.testTripsDestinationToolStripMenuItem.Text = "TestTripsDestination";
             this.testTripsDestinationToolStripMenuItem.Click += new System.EventHandler(this.testTripsDestinationToolStripMenuItem_Click);
             // 
             // testClientToolStripMenuItem
             // 
             this.testClientToolStripMenuItem.Name = "testClientToolStripMenuItem";
-            this.testClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testClientToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.testClientToolStripMenuItem.Text = "TestClient";
             this.testClientToolStripMenuItem.Click += new System.EventHandler(this.testClientToolStripMenuItem_Click);
+            // 
+            // testAgencyToolStripMenuItem
+            // 
+            this.testAgencyToolStripMenuItem.Name = "testAgencyToolStripMenuItem";
+            this.testAgencyToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.testAgencyToolStripMenuItem.Text = "TestAgency";
+            this.testAgencyToolStripMenuItem.Click += new System.EventHandler(this.testAgencyToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
@@ -136,18 +145,30 @@ namespace Pardavimu_administravimas
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
-            // testAgencyToolStripMenuItem
+            // comboBox1
             // 
-            this.testAgencyToolStripMenuItem.Name = "testAgencyToolStripMenuItem";
-            this.testAgencyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.testAgencyToolStripMenuItem.Text = "TestAgency";
-            this.testAgencyToolStripMenuItem.Click += new System.EventHandler(this.testAgencyToolStripMenuItem_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 134);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // uzrasasAgentas
+            // 
+            this.uzrasasAgentas.AutoSize = true;
+            this.uzrasasAgentas.Location = new System.Drawing.Point(12, 118);
+            this.uzrasasAgentas.Name = "uzrasasAgentas";
+            this.uzrasasAgentas.Size = new System.Drawing.Size(91, 13);
+            this.uzrasasAgentas.TabIndex = 5;
+            this.uzrasasAgentas.Text = "Pasirinkite agentą";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uzrasasAgentas);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.uzrasasAgentura);
             this.Controls.Add(this.pasirinkimasAgentura);
@@ -176,6 +197,8 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.ToolStripMenuItem testTripsDestinationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testAgencyToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label uzrasasAgentas;
     }
 }
 

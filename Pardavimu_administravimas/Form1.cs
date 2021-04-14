@@ -17,12 +17,11 @@ namespace Pardavimu_administravimas
         private List<TestTrips> TripsT;
         private List<TestTripsDestination> TripsDestinationT;
         private List<TestClient> ClientT;
-        private List<TestAgency> AgencyT; 
+        private List<TestAgency> AgencyT;
         public Form1()
         {
             InitializeComponent();
         }
-
         private void išeitiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();

@@ -43,6 +43,10 @@ namespace Pardavimu_administravimas
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.uzrasasAgentas = new System.Windows.Forms.Label();
+            this.aprašymasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontaktaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +71,10 @@ namespace Pardavimu_administravimas
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.failasToolStripMenuItem,
-            this.testMenuToolStripMenuItem});
+            this.testMenuToolStripMenuItem,
+            this.aprašymasToolStripMenuItem,
+            this.kontaktaiToolStripMenuItem,
+            this.pagalbaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -162,11 +169,43 @@ namespace Pardavimu_administravimas
             this.uzrasasAgentas.TabIndex = 5;
             this.uzrasasAgentas.Text = "Pasirinkite agentą";
             // 
+            // aprašymasToolStripMenuItem
+            // 
+            this.aprašymasToolStripMenuItem.Name = "aprašymasToolStripMenuItem";
+            this.aprašymasToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.aprašymasToolStripMenuItem.Text = "Aprašymas";
+            this.aprašymasToolStripMenuItem.Click += new System.EventHandler(this.aprašymasToolStripMenuItem_Click);
+            // 
+            // kontaktaiToolStripMenuItem
+            // 
+            this.kontaktaiToolStripMenuItem.Name = "kontaktaiToolStripMenuItem";
+            this.kontaktaiToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.kontaktaiToolStripMenuItem.Text = "Kontaktai";
+            this.kontaktaiToolStripMenuItem.Click += new System.EventHandler(this.kontaktaiToolStripMenuItem_Click);
+            // 
+            // pagalbaToolStripMenuItem
+            // 
+            this.pagalbaToolStripMenuItem.Name = "pagalbaToolStripMenuItem";
+            this.pagalbaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pagalbaToolStripMenuItem.Text = "Pagalba";
+            this.pagalbaToolStripMenuItem.Click += new System.EventHandler(this.pagalbaToolStripMenuItem_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBox1.Location = new System.Drawing.Point(70, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Ieškoti...";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.uzrasasAgentas);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.richTextBox1);
@@ -175,7 +214,7 @@ namespace Pardavimu_administravimas
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Pardavimų administravimas";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -199,6 +238,10 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.ToolStripMenuItem testAgencyToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label uzrasasAgentas;
+        private System.Windows.Forms.ToolStripMenuItem aprašymasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kontaktaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pagalbaToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

@@ -20,7 +20,7 @@ namespace Pardavimu_administravimas
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Vartotojas\Documents\login_data.mdf;
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\evald\Documents\login_data.mdf;
                 Integrated Security=True;Connect Timeout=30;");
             SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login where Username =" +
                 "'" + usernameBox.Text + " ' and Password ='" + passwordBox.Text + "'",con);

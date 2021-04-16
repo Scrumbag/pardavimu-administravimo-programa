@@ -29,3 +29,5 @@ C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_adm
 C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.exe
 C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.pdb
 C:\Users\Vartotojas\Documents\GitHub\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.LoginApp.resources
+C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.LoginApp.resources
+C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.popupForm.resources

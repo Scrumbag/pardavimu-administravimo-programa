@@ -204,6 +204,28 @@ namespace Pardavimu_administravimas
             }
         }
 
-        
+        private void aprašymasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            popupForm aprasymasForm = new popupForm();
+            aprasymasForm.Text = "Aprašymas";
+            aprasymasForm.LabelText = "Programa kaupia duomenis apie klientus (fiziniai/juridiniai asmenys), parduodamus produktus, bei įvykdytus užsakymus. Gali suformuoti ataskaitą, kuri parodo kiek produkcijos kuris klientas yra pirkęs ir kiek kuris darbuotojas yra pardavęs.";
+            aprasymasForm.ShowDialog();
+        }
+
+        private void kontaktaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            popupForm kontaktaiForm = new popupForm();
+            kontaktaiForm.Text = "Kontaktai";
+            kontaktaiForm.LabelText = "Dmitrij Zubko IFIN-9/2 dmizub@ktu.lt\nGediminas Mažeika IFIN-9/2 gedmaz@ktu.lt\nEvaldas Liutkus IFIN-9/2 evaliu@ktu.lt\nRokas Eitavičius IFIN-9/2 rokeit@ktu.lt\nRokas Beniušis IFIN-9/2 rokben@ktu.lt";
+            kontaktaiForm.ShowDialog();
+        }
+
+        private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            popupForm pagalbaForm = new popupForm();
+            pagalbaForm.Text = "Pagalba";
+            pagalbaForm.LabelText = "Norėdami sužinoti ką daro programa spauskite 'Aprašymas'.";
+            pagalbaForm.ShowDialog();
+        }
     }
 }

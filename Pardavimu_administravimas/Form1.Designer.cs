@@ -40,13 +40,15 @@ namespace Pardavimu_administravimas
             this.testTripsDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testAgencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.uzrasasAgentas = new System.Windows.Forms.Label();
             this.aprašymasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontaktaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uzrasasAgentas = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Country = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,32 +145,6 @@ namespace Pardavimu_administravimas
             this.testAgencyToolStripMenuItem.Text = "TestAgency";
             this.testAgencyToolStripMenuItem.Click += new System.EventHandler(this.testAgencyToolStripMenuItem_Click);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(176, 27);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(596, 411);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // uzrasasAgentas
-            // 
-            this.uzrasasAgentas.AutoSize = true;
-            this.uzrasasAgentas.Location = new System.Drawing.Point(12, 118);
-            this.uzrasasAgentas.Name = "uzrasasAgentas";
-            this.uzrasasAgentas.Size = new System.Drawing.Size(91, 13);
-            this.uzrasasAgentas.TabIndex = 5;
-            this.uzrasasAgentas.Text = "Pasirinkite agentą";
-            // 
             // aprašymasToolStripMenuItem
             // 
             this.aprašymasToolStripMenuItem.Name = "aprašymasToolStripMenuItem";
@@ -190,6 +166,32 @@ namespace Pardavimu_administravimas
             this.pagalbaToolStripMenuItem.Text = "Pagalba";
             this.pagalbaToolStripMenuItem.Click += new System.EventHandler(this.pagalbaToolStripMenuItem_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(176, 27);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(596, 411);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 134);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // uzrasasAgentas
+            // 
+            this.uzrasasAgentas.AutoSize = true;
+            this.uzrasasAgentas.Location = new System.Drawing.Point(9, 118);
+            this.uzrasasAgentas.Name = "uzrasasAgentas";
+            this.uzrasasAgentas.Size = new System.Drawing.Size(91, 13);
+            this.uzrasasAgentas.TabIndex = 5;
+            this.uzrasasAgentas.Text = "Pasirinkite agentą";
+            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -200,11 +202,31 @@ namespace Pardavimu_administravimas
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "Ieškoti...";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(12, 193);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(139, 21);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // Country
+            // 
+            this.Country.AutoSize = true;
+            this.Country.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Country.Location = new System.Drawing.Point(12, 174);
+            this.Country.Name = "Country";
+            this.Country.Size = new System.Drawing.Size(83, 13);
+            this.Country.TabIndex = 8;
+            this.Country.Text = "Pasirinkite kryptį";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Country);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.uzrasasAgentas);
             this.Controls.Add(this.comboBox1);
@@ -242,6 +264,8 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.ToolStripMenuItem kontaktaiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagalbaToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label Country;
     }
 }
 

@@ -31,3 +31,15 @@ C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_adm
 C:\Users\Vartotojas\Documents\GitHub\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.LoginApp.resources
 C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.LoginApp.resources
 C:\Users\evald\Desktop\projektas\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.popupForm.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.exe.config
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.exe
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.pdb
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csprojAssemblyReference.cache
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form1.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.popupForm.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.LoginApp.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Properties.Resources.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csproj.GenerateResource.cache
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csproj.CoreCompileInputs.cache
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.exe
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.pdb

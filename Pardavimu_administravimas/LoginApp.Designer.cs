@@ -33,6 +33,7 @@ namespace Pardavimu_administravimas
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.klaida = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +56,7 @@ namespace Pardavimu_administravimas
             // 
             // passwordBox
             // 
+            this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(138, 143);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(195, 20);
@@ -71,11 +73,22 @@ namespace Pardavimu_administravimas
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // klaida
+            // 
+            this.klaida.AutoSize = true;
+            this.klaida.ForeColor = System.Drawing.Color.Red;
+            this.klaida.Location = new System.Drawing.Point(138, 184);
+            this.klaida.Name = "klaida";
+            this.klaida.Size = new System.Drawing.Size(10, 13);
+            this.klaida.TabIndex = 4;
+            this.klaida.Text = " ";
+            // 
             // LoginApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 313);
+            this.Controls.Add(this.klaida);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.usernameBox);
@@ -93,5 +106,6 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Label klaida;
     }
 }

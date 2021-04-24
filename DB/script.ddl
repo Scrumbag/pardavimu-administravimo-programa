@@ -1,42 +1,49 @@
 #@(#) script.ddl
 
-DROP TABLE IF EXISTS KELEIVIU_KIEKIS;
 DROP TABLE IF EXISTS KELIONE;
 DROP TABLE IF EXISTS KELIONES_KRYPTIS;
 DROP TABLE IF EXISTS DARBUOTOJAS;
+DROP TABLE IF EXISTS PRISIJUNGIMAI;
 DROP TABLE IF EXISTS KLIENTAS;
 DROP TABLE IF EXISTS AGENTURA;
 
 CREATE TABLE AGENTURA
 (
-	pavadinimas varchar (255) NOT NULL,
-	imones_kodas integer NOT NULL,
-	telefonas varchar (255) NOT NULL,
-	adresas varchar (255) NOT NULL,
-	salis varchar (255) NOT NULL,
+	pavadinimas varchar (30) NOT NULL,
+	imones_kodas integer (9) NOT NULL,
+	telefonas varchar (12) NOT NULL,
+	adresas varchar (70) NOT NULL,
+	salis varchar (50) NOT NULL,
 	id_AGENTURA integer NOT NULL,
 	PRIMARY KEY(id_AGENTURA)
 );
 
 CREATE TABLE KLIENTAS
 (
-	el_pastas varchar (255) NOT NULL,
-	vardas varchar (255) NOT NULL,
-	pavarde varchar (255) NOT NULL,
-	telefonas varchar (255) NOT NULL,
+	el_pastas varchar (50) NOT NULL,
+	vardas varchar (20) NOT NULL,
+	pavarde varchar (30) NOT NULL,
+	telefonas varchar (12) NOT NULL,
 	gimimo_data date NOT NULL,
 	id_KLIENTAS integer NOT NULL,
 	PRIMARY KEY(id_KLIENTAS)
 );
 
+CREATE TABLE PRISIJUNGIMAI
+(
+	username varchar (20) NOT NULL,
+	password varchar (255) NOT NULL,
+	id_PRISIJUNGIMAI integer NOT NULL,
+	PRIMARY KEY(id_PRISIJUNGIMAI)
+);
+
 CREATE TABLE DARBUOTOJAS
 (
-	el_pastas varchar (255) NOT NULL,
-	vardas varchar (255) NOT NULL,
-	pavarde varchar (255) NOT NULL,
-	telefonas varchar (255) NOT NULL,
-	gimimo_data date NOT NULL,
-	asmens_kodas varchar (255) NOT NULL,
+	el_pastas varchar (50) NOT NULL,
+	vardas varchar (20) NOT NULL,
+	pavarde varchar (30) NOT NULL,
+	telefonas varchar (12) NOT NULL,
+	asmens_kodas varchar (11) NOT NULL,
 	pardavimu_kiekis integer NOT NULL,
 	pelnas double precision NOT NULL,
 	id_DARBUOTOJAS integer NOT NULL,
@@ -47,33 +54,25 @@ CREATE TABLE DARBUOTOJAS
 
 CREATE TABLE KELIONES_KRYPTIS
 (
-	salis varchar (255) NOT NULL,
+	salis varchar (50) NOT NULL,
 	id_KELIONES_KRYPTIS integer NOT NULL,
 	fk_AGENTURAid_AGENTURA integer NOT NULL,
 	PRIMARY KEY(id_KELIONES_KRYPTIS),
-	CONSTRAINT turi FOREIGN KEY(fk_AGENTURAid_AGENTURA) REFERENCES AGENTURA (id_AGENTURA)
+	CONSTRAINT siulo FOREIGN KEY(fk_AGENTURAid_AGENTURA) REFERENCES AGENTURA (id_AGENTURA)
 );
 
 CREATE TABLE KELIONE
 (
-	miestas varchar (255) NOT NULL,
+	miestas varchar (30) NOT NULL,
 	data date NOT NULL,
 	kaina_keleiviui double precision NOT NULL,
+	keleiviu_kiekis integer NOT NULL,
 	id_KELIONE integer NOT NULL,
 	fk_DARBUOTOJASid_DARBUOTOJAS integer NOT NULL,
 	fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS integer NOT NULL,
+	fk_KLIENTASid_KLIENTAS integer NOT NULL,
 	PRIMARY KEY(id_KELIONE),
 	CONSTRAINT parduoda FOREIGN KEY(fk_DARBUOTOJASid_DARBUOTOJAS) REFERENCES DARBUOTOJAS (id_DARBUOTOJAS),
-	CONSTRAINT priklauso FOREIGN KEY(fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS) REFERENCES KELIONES_KRYPTIS (id_KELIONES_KRYPTIS)
-);
-
-CREATE TABLE KELEIVIU_KIEKIS
-(
-	kiekis integer NOT NULL,
-	id_KELEIVIU_KIEKIS integer NOT NULL,
-	fk_KLIENTASid_KLIENTAS integer NOT NULL,
-	fk_KELIONEid_KELIONE integer NOT NULL,
-	PRIMARY KEY(id_KELEIVIU_KIEKIS),
-	CONSTRAINT itraukia FOREIGN KEY(fk_KLIENTASid_KLIENTAS) REFERENCES KLIENTAS (id_KLIENTAS),
-	CONSTRAINT ieina_i FOREIGN KEY(fk_KELIONEid_KELIONE) REFERENCES KELIONE (id_KELIONE)
+	CONSTRAINT priklauso FOREIGN KEY(fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS) REFERENCES KELIONES_KRYPTIS (id_KELIONES_KRYPTIS),
+	CONSTRAINT uzsako FOREIGN KEY(fk_KLIENTASid_KLIENTAS) REFERENCES KLIENTAS (id_KLIENTAS)
 );

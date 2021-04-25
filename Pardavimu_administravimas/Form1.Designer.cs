@@ -43,7 +43,6 @@ namespace Pardavimu_administravimas
             this.aprašymasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontaktaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.uzrasasAgentas = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -52,8 +51,10 @@ namespace Pardavimu_administravimas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pasirinkimasAgentura
@@ -83,7 +84,7 @@ namespace Pardavimu_administravimas
             this.pagalbaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(922, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -170,15 +171,6 @@ namespace Pardavimu_administravimas
             this.pagalbaToolStripMenuItem.Text = "Pagalba";
             this.pagalbaToolStripMenuItem.Click += new System.EventHandler(this.pagalbaToolStripMenuItem_Click);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(176, 27);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(596, 411);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -252,11 +244,20 @@ namespace Pardavimu_administravimas
             this.button1.Text = "Suformuoti ataskaitą";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(176, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(734, 388);
+            this.dataGridView1.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(922, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -265,16 +266,18 @@ namespace Pardavimu_administravimas
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.uzrasasAgentas);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.uzrasasAgentura);
             this.Controls.Add(this.pasirinkimasAgentura);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Pardavimų administravimas";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,7 +292,6 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.ToolStripMenuItem išeitiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testEmployeeToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripMenuItem testTripsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testTripsDestinationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testClientToolStripMenuItem;
@@ -305,6 +307,7 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

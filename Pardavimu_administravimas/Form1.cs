@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Pardavimu_administravimas
 {
@@ -141,7 +143,7 @@ namespace Pardavimu_administravimas
             if (result1 == DialogResult.OK)
             {
                 string fv = openFileDialog1.FileName;
-                richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
+                //richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
                 EmployeeT = ReadTestEmployee(fv);
             }
         }
@@ -156,7 +158,7 @@ namespace Pardavimu_administravimas
             if (result2 == DialogResult.OK)
             {
                 string fv = openFileDialog2.FileName;
-                richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
+                //richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
                 TripsT = ReadTripsT(fv);
             }
         }
@@ -171,7 +173,7 @@ namespace Pardavimu_administravimas
             if (result2 == DialogResult.OK)
             {
                 string fv = openFileDialog2.FileName;
-                richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
+                //richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
                 TripsDestinationT = ReadTTD(fv);
             }
         }
@@ -185,7 +187,7 @@ namespace Pardavimu_administravimas
             if (result2 == DialogResult.OK)
             {
                 string fv = openFileDialog2.FileName;
-                richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
+                //richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
                 ClientT = ReadTestClient(fv);
             }
         }
@@ -199,7 +201,7 @@ namespace Pardavimu_administravimas
             if (result2 == DialogResult.OK)
             {
                 string fv = openFileDialog2.FileName;
-                richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
+                //richTextBox1.LoadFile(fv, RichTextBoxStreamType.PlainText);
                 AgencyT = ReadTestAgency(fv);
             }
         }
@@ -226,6 +228,38 @@ namespace Pardavimu_administravimas
             pagalbaForm.Text = "Pagalba";
             pagalbaForm.LabelText = "Norėdami sužinoti ką daro programa spauskite 'Aprašymas'.";
             pagalbaForm.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = GetList();
+            dataGridView1.Columns[0].Width = 50;
+            dataGridView1.Columns[3].Width = 90;
+            dataGridView1.Columns[4].Width = 50;
+            dataGridView1.Columns[5].Width = 150;
+            dataGridView1.Columns[6].Width = 150;
+        }
+        private DataTable GetList()
+        {
+            MySqlConnection con = new MySqlConnection(@"server=46.17.175.136;database=u682536470_keliones;userid=u682536470_agentura;password=B#u^4E|l2;");
+            con.Open();
+            MySqlCommand cmd;
+            cmd = con.CreateCommand();
+            string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
+                                  "KELIONES_KRYPTIS.salis AS Šalis," +
+                                  "KELIONE.miestas AS Miestas," +
+                                  "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
+                                  "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
+                                  "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
+                                  "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas " +
+                           "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
+                                        "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
+                                        "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS";
+            cmd.CommandText = query;
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(sdr);
+            return dt;
         }
     }
 }

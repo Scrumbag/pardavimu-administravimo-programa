@@ -14,7 +14,6 @@ namespace Pardavimu_administravimas
 {
     public partial class LoginApp : Form
     {
-        //https://www.youtube.com/watch?v=tcmmCcMs8yU
         public LoginApp()
         {
             InitializeComponent();
@@ -22,22 +21,6 @@ namespace Pardavimu_administravimas
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dima\Documents\login_data.mdf;
-            //    Integrated Security=True;Connect Timeout=30;");
-            //SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login where Username =" +
-            //    "'" + usernameBox.Text + " ' and Password ='" + passwordBox.Text + "'",con);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //if(dt.Rows[0][0].ToString() == "1")
-            //{
-            //    this.Hide();
-            //    Form1 ss = new Form1();
-            //    ss.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Neteisingas prisijungimo vardas ir slaptažodis");
-            //}
             String str = @"server=46.17.175.136;database=u682536470_keliones;userid=u682536470_agentura;password=B#u^4E|l2;";
             MySqlConnection con = null;
             MySqlDataReader reader = null;

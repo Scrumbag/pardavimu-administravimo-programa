@@ -29,6 +29,7 @@ namespace Pardavimu_administravimas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pasirinkiteKlienta = new System.Windows.Forms.ComboBox();
             this.uzrasasAgentura = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -92,7 +93,7 @@ namespace Pardavimu_administravimas
             // išeitiToolStripMenuItem
             // 
             this.išeitiToolStripMenuItem.Name = "išeitiToolStripMenuItem";
-            this.išeitiToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.išeitiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.išeitiToolStripMenuItem.Text = "Išeiti";
             this.išeitiToolStripMenuItem.Click += new System.EventHandler(this.išeitiToolStripMenuItem_Click);
             // 
@@ -217,6 +218,7 @@ namespace Pardavimu_administravimas
             this.Controls.Add(this.pasirinkiteKlienta);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Pardavimų administravimas";

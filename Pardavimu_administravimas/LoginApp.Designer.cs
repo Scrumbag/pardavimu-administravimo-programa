@@ -29,6 +29,7 @@ namespace Pardavimu_administravimas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginApp));
             this.label1 = new System.Windows.Forms.Label();
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
@@ -93,8 +94,9 @@ namespace Pardavimu_administravimas
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginApp";
-            this.Text = "LoginApp";
+            this.Text = "Prisijungimas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -34,7 +34,8 @@ namespace Pardavimu_administravimas
 
         private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string pagalba = "Programos naudojimas:\n...";
+            string pagalba = "Programos naudojimas:\n" +
+                             "Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus. Naudojant paieškos lauką galima susirasti reikiamą duomenį. Lentelę taip pat galima filtruoti pagal klientą, agentą ir krypti naudojant pasirinkimus lentelės kairėje. Norint išvalyti filtravimą ar rikiavimą spauskite 'Kelionių duomenys' mygtuką. Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką.\n Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
             MessageBox.Show(pagalba, "Pagalba");
         }
 
@@ -63,7 +64,8 @@ namespace Pardavimu_administravimas
                                   "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas " +
                            "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
                                         "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
-                                        "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS";
+                                        "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
+                           "ORDER BY KELIONE.id_KELIONE asc";
             cmd.CommandText = query;
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -111,7 +113,8 @@ namespace Pardavimu_administravimas
                            "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
                                         "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
                                         "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
-                           "WHERE DARBUOTOJAS.pavarde = " + "'" + pavarde + "'";
+                           "WHERE DARBUOTOJAS.pavarde = " + "'" + pavarde + "' " +
+                           "ORDER BY KELIONE.id_KELIONE asc";
             cmd.CommandText = query;
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -140,7 +143,8 @@ namespace Pardavimu_administravimas
                            "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
                                         "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
                                         "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
-                           "WHERE KLIENTAS.pavarde = " + "'" + pavarde + "'";
+                           "WHERE KLIENTAS.pavarde = " + "'" + pavarde + "' " +
+                           "ORDER BY KELIONE.id_KELIONE asc";
             cmd.CommandText = query;
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -169,7 +173,8 @@ namespace Pardavimu_administravimas
                            "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
                                         "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
                                         "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
-                           "WHERE KELIONES_KRYPTIS.salis = " + "'" + salis + "'";
+                           "WHERE KELIONES_KRYPTIS.salis = " + "'" + salis + "' " +
+                           "ORDER BY KELIONE.id_KELIONE asc";
             cmd.CommandText = query;
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -184,6 +189,12 @@ namespace Pardavimu_administravimas
             pasirinkiteAgenta.ResetText();
             pasirinkiteKrypti.ResetText();
             dataGridView1.DataSource = GetList();
+        }
+
+        private void pridėtiDarbuotojąToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 darbPridejimas = new Form3();
+            darbPridejimas.ShowDialog();
         }
     }
 }

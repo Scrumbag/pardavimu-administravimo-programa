@@ -29,7 +29,7 @@ namespace Pardavimu_administravimas
         /// </summary>
         private void InitializeComponent()
         {
-            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.Pelnas = new System.Windows.Forms.TextBox();
             this.Agentura = new System.Windows.Forms.ComboBox();
             this.pardavimuKiekis = new System.Windows.Forms.TextBox();
@@ -45,7 +45,6 @@ namespace Pardavimu_administravimas
             this.agenturaL = new System.Windows.Forms.Label();
             this.PelnasL = new System.Windows.Forms.Label();
             this.pridetiAgentaB = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
             // Pelnas
@@ -190,18 +189,16 @@ namespace Pardavimu_administravimas
             this.Controls.Add(this.pardavimuKiekis);
             this.Controls.Add(this.Agentura);
             this.Controls.Add(this.Pelnas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Pridėti agentą";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Diagnostics.PerformanceCounter performanceCounter1;
         private System.Windows.Forms.TextBox Pelnas;
         private System.Windows.Forms.ComboBox Agentura;
         private System.Windows.Forms.TextBox pardavimuKiekis;

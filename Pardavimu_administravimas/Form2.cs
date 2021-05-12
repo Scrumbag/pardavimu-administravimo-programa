@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Pardavimu_administravimas
 {
-    public partial class popupForm : Form
+    public partial class Form2 : Form
     {
-        public popupForm()
+        public Form2()
         {
             InitializeComponent();
-        }
-        public string LabelText
-        {
-            get
-            {
-                return this.popupLabel.Text;
-            }
-            set
-            {
-                this.popupLabel.Text = value;
-            }
         }
     }
 }

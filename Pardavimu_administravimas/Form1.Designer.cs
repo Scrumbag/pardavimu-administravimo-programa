@@ -33,6 +33,7 @@ namespace Pardavimu_administravimas
             this.pasirinkiteKlienta = new System.Windows.Forms.ComboBox();
             this.uzrasasAgentura = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pridetiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aprašymasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontaktaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +47,8 @@ namespace Pardavimu_administravimas
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.pridetiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pridėtiDarbuotojąToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pridėtiKelioniųKryptįToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,6 +84,15 @@ namespace Pardavimu_administravimas
             this.menuStrip1.Size = new System.Drawing.Size(1016, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pridetiToolStripMenuItem
+            // 
+            this.pridetiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pridėtiDarbuotojąToolStripMenuItem,
+            this.pridėtiKelioniųKryptįToolStripMenuItem});
+            this.pridetiToolStripMenuItem.Name = "pridetiToolStripMenuItem";
+            this.pridetiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.pridetiToolStripMenuItem.Text = "Pridėti...";
             // 
             // aprašymasToolStripMenuItem
             // 
@@ -198,20 +208,19 @@ namespace Pardavimu_administravimas
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pridetiToolStripMenuItem
-            // 
-            this.pridetiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pridėtiDarbuotojąToolStripMenuItem});
-            this.pridetiToolStripMenuItem.Name = "pridetiToolStripMenuItem";
-            this.pridetiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.pridetiToolStripMenuItem.Text = "Prideti...";
-            // 
             // pridėtiDarbuotojąToolStripMenuItem
             // 
             this.pridėtiDarbuotojąToolStripMenuItem.Name = "pridėtiDarbuotojąToolStripMenuItem";
-            this.pridėtiDarbuotojąToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pridėtiDarbuotojąToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.pridėtiDarbuotojąToolStripMenuItem.Text = "Pridėti darbuotoją";
             this.pridėtiDarbuotojąToolStripMenuItem.Click += new System.EventHandler(this.pridėtiDarbuotojąToolStripMenuItem_Click);
+            // 
+            // pridėtiKelioniųKryptįToolStripMenuItem
+            // 
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Name = "pridėtiKelioniųKryptįToolStripMenuItem";
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Text = "Pridėti kelionių kryptį";
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Click += new System.EventHandler(this.pridėtiKelioniųKryptįToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -266,6 +275,7 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem pridetiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pridėtiDarbuotojąToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pridėtiKelioniųKryptįToolStripMenuItem;
     }
 }
 

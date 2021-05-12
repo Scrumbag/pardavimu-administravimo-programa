@@ -34,8 +34,8 @@ namespace Pardavimu_administravimas
 
         private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string pagalba = "Programos naudojimas:\n" +
-                             "Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus. Naudojant paieškos lauką galima susirasti reikiamą duomenį. Lentelę taip pat galima filtruoti pagal klientą, agentą ir krypti naudojant pasirinkimus lentelės kairėje. Norint išvalyti filtravimą ar rikiavimą spauskite 'Kelionių duomenys' mygtuką. Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką.\n Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
+            string pagalba = "Programos naudojimas:\n\n" +
+                             "• Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus.\n• Naudojant paieškos lauką galima susirasti reikiamą duomenį.\n• Lentelę taip pat galima filtruoti pagal klientą, agentą ir kryptį naudojant pasirinkimus lentelės kairėje.\n• Norint išvalyti filtravimą spauskite 'Kelionių duomenys' mygtuką.\n• Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką.\n• Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n• Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
             MessageBox.Show(pagalba, "Pagalba");
         }
 
@@ -195,6 +195,12 @@ namespace Pardavimu_administravimas
         {
             Form3 darbPridejimas = new Form3();
             darbPridejimas.ShowDialog();
+        }
+
+        private void pridėtiKelioniųKryptįToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 kryptiesPridejimas = new Form2();
+            kryptiesPridejimas.ShowDialog();
         }
     }
 }

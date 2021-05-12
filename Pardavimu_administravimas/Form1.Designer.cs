@@ -33,8 +33,6 @@ namespace Pardavimu_administravimas
             this.pasirinkiteKlienta = new System.Windows.Forms.ComboBox();
             this.uzrasasAgentura = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.failasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.išeitiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aprašymasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontaktaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +45,7 @@ namespace Pardavimu_administravimas
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,13 +56,14 @@ namespace Pardavimu_administravimas
             this.pasirinkiteKlienta.FormattingEnabled = true;
             this.pasirinkiteKlienta.Location = new System.Drawing.Point(12, 82);
             this.pasirinkiteKlienta.Name = "pasirinkiteKlienta";
-            this.pasirinkiteKlienta.Size = new System.Drawing.Size(139, 21);
+            this.pasirinkiteKlienta.Size = new System.Drawing.Size(158, 21);
             this.pasirinkiteKlienta.TabIndex = 0;
+            this.pasirinkiteKlienta.SelectedIndexChanged += new System.EventHandler(this.pasirinkiteKlienta_SelectedIndexChanged);
             // 
             // uzrasasAgentura
             // 
             this.uzrasasAgentura.AutoSize = true;
-            this.uzrasasAgentura.Location = new System.Drawing.Point(12, 66);
+            this.uzrasasAgentura.Location = new System.Drawing.Point(9, 66);
             this.uzrasasAgentura.Name = "uzrasasAgentura";
             this.uzrasasAgentura.Size = new System.Drawing.Size(89, 13);
             this.uzrasasAgentura.TabIndex = 1;
@@ -72,7 +72,6 @@ namespace Pardavimu_administravimas
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.failasToolStripMenuItem,
             this.aprašymasToolStripMenuItem,
             this.kontaktaiToolStripMenuItem,
             this.pagalbaToolStripMenuItem});
@@ -81,21 +80,6 @@ namespace Pardavimu_administravimas
             this.menuStrip1.Size = new System.Drawing.Size(922, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // failasToolStripMenuItem
-            // 
-            this.failasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.išeitiToolStripMenuItem});
-            this.failasToolStripMenuItem.Name = "failasToolStripMenuItem";
-            this.failasToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.failasToolStripMenuItem.Text = "Failas";
-            // 
-            // išeitiToolStripMenuItem
-            // 
-            this.išeitiToolStripMenuItem.Name = "išeitiToolStripMenuItem";
-            this.išeitiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.išeitiToolStripMenuItem.Text = "Išeiti";
-            this.išeitiToolStripMenuItem.Click += new System.EventHandler(this.išeitiToolStripMenuItem_Click);
             // 
             // aprašymasToolStripMenuItem
             // 
@@ -123,7 +107,7 @@ namespace Pardavimu_administravimas
             this.pasirinkiteAgenta.FormattingEnabled = true;
             this.pasirinkiteAgenta.Location = new System.Drawing.Point(12, 134);
             this.pasirinkiteAgenta.Name = "pasirinkiteAgenta";
-            this.pasirinkiteAgenta.Size = new System.Drawing.Size(139, 21);
+            this.pasirinkiteAgenta.Size = new System.Drawing.Size(158, 21);
             this.pasirinkiteAgenta.TabIndex = 4;
             this.pasirinkiteAgenta.SelectedIndexChanged += new System.EventHandler(this.pasirinkiteAgenta_SelectedIndexChanged);
             // 
@@ -140,25 +124,26 @@ namespace Pardavimu_administravimas
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(70, 27);
+            this.textBox1.Location = new System.Drawing.Point(12, 27);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "Ieškoti...";
             // 
             // pasirinkiteKrypti
             // 
             this.pasirinkiteKrypti.FormattingEnabled = true;
-            this.pasirinkiteKrypti.Location = new System.Drawing.Point(12, 193);
+            this.pasirinkiteKrypti.Location = new System.Drawing.Point(12, 186);
             this.pasirinkiteKrypti.Name = "pasirinkiteKrypti";
-            this.pasirinkiteKrypti.Size = new System.Drawing.Size(139, 21);
+            this.pasirinkiteKrypti.Size = new System.Drawing.Size(158, 21);
             this.pasirinkiteKrypti.TabIndex = 7;
+            this.pasirinkiteKrypti.SelectedIndexChanged += new System.EventHandler(this.pasirinkiteKrypti_SelectedIndexChanged);
             // 
             // Country
             // 
             this.Country.AutoSize = true;
             this.Country.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Country.Location = new System.Drawing.Point(12, 174);
+            this.Country.Location = new System.Drawing.Point(12, 170);
             this.Country.Name = "Country";
             this.Country.Size = new System.Drawing.Size(83, 13);
             this.Country.TabIndex = 8;
@@ -181,13 +166,13 @@ namespace Pardavimu_administravimas
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "0.0.1";
+            this.label1.Text = "0.0.2";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 235);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 41);
+            this.button1.Size = new System.Drawing.Size(69, 41);
             this.button1.TabIndex = 11;
             this.button1.Text = "Suformuoti ataskaitą";
             this.button1.UseVisualStyleBackColor = true;
@@ -197,14 +182,25 @@ namespace Pardavimu_administravimas
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(176, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(734, 388);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 410);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(101, 235);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 41);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Kelionių duomenys";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -237,8 +233,6 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.ComboBox pasirinkiteKlienta;
         private System.Windows.Forms.Label uzrasasAgentura;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem failasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem išeitiToolStripMenuItem;
         private System.Windows.Forms.ComboBox pasirinkiteAgenta;
         private System.Windows.Forms.Label uzrasasAgentas;
         private System.Windows.Forms.ToolStripMenuItem aprašymasToolStripMenuItem;
@@ -251,6 +245,7 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

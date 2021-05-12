@@ -19,33 +19,23 @@ namespace Pardavimu_administravimas
         {
             InitializeComponent();
         }
-        private void išeitiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void aprašymasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            popupForm aprasymasForm = new popupForm();
-            aprasymasForm.Text = "Aprašymas";
-            aprasymasForm.LabelText = "Programa kaupia duomenis apie klientus (fiziniai/juridiniai asmenys), parduodamus produktus, bei įvykdytus užsakymus. Gali suformuoti ataskaitą, kuri parodo kiek produkcijos kuris klientas yra pirkęs ir kiek kuris darbuotojas yra pardavęs.";
-            aprasymasForm.ShowDialog();
+            string aprasymas = "Programa kaupia duomenis apie klientus (fiziniai/juridiniai asmenys), parduodamus produktus, bei įvykdytus užsakymus. Gali suformuoti ataskaitą, kuri parodo kiek produkcijos kuris klientas yra pirkęs ir kiek kuris darbuotojas yra pardavęs.\n\nProgramą kūrė: *šią informaciją galite sužinoti nuėję į kontaktų skiltį*";
+            MessageBox.Show(aprasymas, "Programos aprašymas");
         }
 
         private void kontaktaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            popupForm kontaktaiForm = new popupForm();
-            kontaktaiForm.Text = "Kontaktai";
-            kontaktaiForm.LabelText = "Dmitrij Zubko IFIN-9/2 dmizub@ktu.lt\nGediminas Mažeika IFIN-9/2 gedmaz@ktu.lt\nEvaldas Liutkus IFIN-9/2 evaliu@ktu.lt\nRokas Eitavičius IFIN-9/2 rokeit@ktu.lt\nRokas Beniušis IFIN-9/2 rokben@ktu.lt";
-            kontaktaiForm.ShowDialog();
+            string kontaktai = "Dmitrij Zubko IFIN-9/2 dmizub@ktu.lt\nGediminas Mažeika IFIN-9/2 gedmaz4@ktu.lt\nEvaldas Liutkus IFIN-9/2 evaliu@ktu.lt\nRokas Eitavičius IFIN-9/2 rokeit@ktu.lt\nRokas Beniušis IFIN-9/2 rokben1@ktu.lt";
+            MessageBox.Show(kontaktai, "Kontaktai");
         }
 
         private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            popupForm pagalbaForm = new popupForm();
-            pagalbaForm.Text = "Pagalba";
-            pagalbaForm.LabelText = "Norėdami sužinoti ką daro programa spauskite 'Aprašymas'.";
-            pagalbaForm.ShowDialog();
+            string pagalba = "Programos naudojimas:\n...";
+            MessageBox.Show(pagalba, "Pagalba");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,6 +58,7 @@ namespace Pardavimu_administravimas
                                   "KELIONE.miestas AS Miestas," +
                                   "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
                                   "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
+                                  "KELIONE.data AS Data," +
                                   "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
                                   "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas " +
                            "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
@@ -95,14 +86,104 @@ namespace Pardavimu_administravimas
             while (cmbKryptis.Read())
                 pasirinkiteKrypti.Items.Add(cmbKryptis["salis"].ToString());
             cmbKlientas.Close();
-
+            con.Close();
 
             return dt;
         }
 
         private void pasirinkiteAgenta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            MySqlConnection con = new MySqlConnection(@"server=46.17.175.136;database=u682536470_keliones;userid=u682536470_agentura;password=B#u^4E|l2;");
+            con.Open();
+            MySqlCommand cmd;
+            cmd = con.CreateCommand();
+            pasirinkiteKlienta.ResetText();
+            pasirinkiteKrypti.ResetText();
+            string pavarde = pasirinkiteAgenta.GetItemText(this.pasirinkiteAgenta.SelectedItem);
+            string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
+                                  "KELIONE.miestas AS Miestas," +
+                                  "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                  "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
+                                  "KELIONE.data AS Data," +
+                                  "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
+                                  "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas," +
+                                  "KELIONES_KRYPTIS.salis AS Šalis " +
+                           "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
+                                        "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
+                                        "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
+                           "WHERE DARBUOTOJAS.pavarde = " + "'" + pavarde + "'";
+            cmd.CommandText = query;
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(sdr);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void pasirinkiteKlienta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(@"server=46.17.175.136;database=u682536470_keliones;userid=u682536470_agentura;password=B#u^4E|l2;");
+            con.Open();
+            MySqlCommand cmd;
+            cmd = con.CreateCommand();
+            pasirinkiteAgenta.ResetText();
+            pasirinkiteKrypti.ResetText();
+            string pavarde = pasirinkiteKlienta.GetItemText(this.pasirinkiteKlienta.SelectedItem);
+            string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
+                                  "KELIONE.miestas AS Miestas," +
+                                  "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                  "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
+                                  "KELIONE.data AS Data," +
+                                  "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
+                                  "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas," +
+                                  "KELIONES_KRYPTIS.salis AS Šalis " +
+                           "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
+                                        "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
+                                        "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
+                           "WHERE KLIENTAS.pavarde = " + "'" + pavarde + "'";
+            cmd.CommandText = query;
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(sdr);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void pasirinkiteKrypti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(@"server=46.17.175.136;database=u682536470_keliones;userid=u682536470_agentura;password=B#u^4E|l2;");
+            con.Open();
+            MySqlCommand cmd;
+            cmd = con.CreateCommand();
+            pasirinkiteKlienta.ResetText();
+            pasirinkiteAgenta.ResetText();
+            string salis = pasirinkiteKrypti.GetItemText(this.pasirinkiteKrypti.SelectedItem);
+            string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
+                                  "KELIONE.miestas AS Miestas," +
+                                  "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                  "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
+                                  "KELIONE.data AS Data," +
+                                  "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
+                                  "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas," +
+                                  "KELIONES_KRYPTIS.salis AS Šalis " +
+                           "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
+                                        "INNER JOIN DARBUOTOJAS ON KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS = DARBUOTOJAS.id_DARBUOTOJAS " +
+                                        "INNER JOIN KLIENTAS ON KELIONE.fk_KLIENTASid_KLIENTAS = KLIENTAS.id_KLIENTAS " +
+                           "WHERE KELIONES_KRYPTIS.salis = " + "'" + salis + "'";
+            cmd.CommandText = query;
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(sdr);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pasirinkiteKlienta.ResetText();
+            pasirinkiteAgenta.ResetText();
+            pasirinkiteKrypti.ResetText();
+            dataGridView1.DataSource = GetList();
         }
     }
 }

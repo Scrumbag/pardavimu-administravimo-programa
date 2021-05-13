@@ -22,7 +22,7 @@ namespace Pardavimu_administravimas
 
         private void aprašymasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string aprasymas = "Programa kaupia duomenis apie klientus (fiziniai/juridiniai asmenys), parduodamus produktus, bei įvykdytus užsakymus. Gali suformuoti ataskaitą, kuri parodo kiek produkcijos kuris klientas yra pirkęs ir kiek kuris darbuotojas yra pardavęs.\n\nProgramą kūrė: *šią informaciją galite sužinoti nuėję į kontaktų skiltį*";
+            string aprasymas = "Programa kaupia duomenis apie klientus (fiziniai/juridiniai asmenys), parduodamus produktus, bei įvykdytus užsakymus.\nGali suformuoti ataskaitą, kuri parodo kiek produkcijos klientas yra pirkęs, kiek produkcijos darbuotojas yra pardavęs ir uždirbęs bei kiek kelionių tam tikra kryptimi buvo parduota.\n\nProgramą kūrė: *šią informaciją galite sužinoti nuėję į kontaktų skiltį*";
             MessageBox.Show(aprasymas, "Programos aprašymas");
         }
 
@@ -35,7 +35,7 @@ namespace Pardavimu_administravimas
         private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string pagalba = "Programos naudojimas:\n\n" +
-                             "• Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus.\n• Naudojant paieškos lauką galima susirasti reikiamą duomenį.\n• Lentelę taip pat galima filtruoti pagal klientą, agentą ir kryptį naudojant pasirinkimus lentelės kairėje.\n• Norint išvalyti filtravimą spauskite 'Kelionių duomenys' mygtuką.\n• Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką.\n• Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n• Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
+                             "• Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus.\n• Naudojant paieškos lauką galima susirasti reikiamą duomenį.\n• Lentelę taip pat galima filtruoti pagal klientą, agentą ir kryptį naudojant pasirinkimus lentelės kairėje.\n• Norint išvalyti filtravimą spauskite 'Kelionių duomenys' mygtuką.\n• Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką ir iššokusioje formoje pasirinkite kokią ataskaitą formuoti norite.\n• Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n• Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
             MessageBox.Show(pagalba, "Pagalba");
         }
 

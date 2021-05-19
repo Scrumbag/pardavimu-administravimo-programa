@@ -202,5 +202,21 @@ namespace Pardavimu_administravimas
             Form2 kryptiesPridejimas = new Form2();
             kryptiesPridejimas.ShowDialog();
         }
+
+        public void atnaujintiAgentus()
+        {
+            pasirinkiteAgenta.Items.Clear();
+            MySqlConnection con = new MySqlConnection(@"server=46.17.175.136;database=u682536470_keliones;userid=u682536470_agentura;password=B#u^4E|l2;");
+            con.Open();
+
+            MySqlCommand fillAgentas = new MySqlCommand("SELECT * FROM DARBUOTOJAS", con);
+            MySqlDataReader cmbAgentas = fillAgentas.ExecuteReader();
+            while (cmbAgentas.Read())
+            {
+                pasirinkiteAgenta.Items.Add(cmbAgentas["pavarde"].ToString());
+            }
+            cmbAgentas.Close();
+            
+        }
     }
 }

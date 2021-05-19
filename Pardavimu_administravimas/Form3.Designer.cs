@@ -31,7 +31,6 @@ namespace Pardavimu_administravimas
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.Pelnas = new System.Windows.Forms.TextBox();
-            this.Agentura = new System.Windows.Forms.ComboBox();
             this.pardavimuKiekis = new System.Windows.Forms.TextBox();
             this.Telefonas = new System.Windows.Forms.TextBox();
             this.elPastas = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@ namespace Pardavimu_administravimas
             this.elPastasL = new System.Windows.Forms.Label();
             this.pardavimuKiekisL = new System.Windows.Forms.Label();
             this.TelefonasL = new System.Windows.Forms.Label();
-            this.agenturaL = new System.Windows.Forms.Label();
             this.PelnasL = new System.Windows.Forms.Label();
             this.pridetiAgentaB = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -53,14 +51,6 @@ namespace Pardavimu_administravimas
             this.Pelnas.Name = "Pelnas";
             this.Pelnas.Size = new System.Drawing.Size(121, 20);
             this.Pelnas.TabIndex = 0;
-            // 
-            // Agentura
-            // 
-            this.Agentura.FormattingEnabled = true;
-            this.Agentura.Location = new System.Drawing.Point(103, 178);
-            this.Agentura.Name = "Agentura";
-            this.Agentura.Size = new System.Drawing.Size(121, 21);
-            this.Agentura.TabIndex = 1;
             // 
             // pardavimuKiekis
             // 
@@ -142,15 +132,6 @@ namespace Pardavimu_administravimas
             this.TelefonasL.TabIndex = 12;
             this.TelefonasL.Text = "Telefono nr.";
             // 
-            // agenturaL
-            // 
-            this.agenturaL.AutoSize = true;
-            this.agenturaL.Location = new System.Drawing.Point(45, 181);
-            this.agenturaL.Name = "agenturaL";
-            this.agenturaL.Size = new System.Drawing.Size(50, 13);
-            this.agenturaL.TabIndex = 15;
-            this.agenturaL.Text = "Agentūra";
-            // 
             // PelnasL
             // 
             this.PelnasL.AutoSize = true;
@@ -162,20 +143,20 @@ namespace Pardavimu_administravimas
             // 
             // pridetiAgentaB
             // 
-            this.pridetiAgentaB.Location = new System.Drawing.Point(103, 216);
+            this.pridetiAgentaB.Location = new System.Drawing.Point(103, 196);
             this.pridetiAgentaB.Name = "pridetiAgentaB";
             this.pridetiAgentaB.Size = new System.Drawing.Size(121, 32);
             this.pridetiAgentaB.TabIndex = 16;
             this.pridetiAgentaB.Text = "Pridėti";
             this.pridetiAgentaB.UseVisualStyleBackColor = true;
+            this.pridetiAgentaB.Click += new System.EventHandler(this.pridetiAgentaB_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 261);
+            this.ClientSize = new System.Drawing.Size(283, 313);
             this.Controls.Add(this.pridetiAgentaB);
-            this.Controls.Add(this.agenturaL);
             this.Controls.Add(this.PelnasL);
             this.Controls.Add(this.pardavimuKiekisL);
             this.Controls.Add(this.TelefonasL);
@@ -187,7 +168,6 @@ namespace Pardavimu_administravimas
             this.Controls.Add(this.elPastas);
             this.Controls.Add(this.Telefonas);
             this.Controls.Add(this.pardavimuKiekis);
-            this.Controls.Add(this.Agentura);
             this.Controls.Add(this.Pelnas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
@@ -200,7 +180,6 @@ namespace Pardavimu_administravimas
 
         #endregion
         private System.Windows.Forms.TextBox Pelnas;
-        private System.Windows.Forms.ComboBox Agentura;
         private System.Windows.Forms.TextBox pardavimuKiekis;
         private System.Windows.Forms.TextBox Telefonas;
         private System.Windows.Forms.TextBox elPastas;
@@ -211,7 +190,6 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.Label elPastasL;
         private System.Windows.Forms.Label pardavimuKiekisL;
         private System.Windows.Forms.Label TelefonasL;
-        private System.Windows.Forms.Label agenturaL;
         private System.Windows.Forms.Label PelnasL;
         private System.Windows.Forms.Button pridetiAgentaB;
     }

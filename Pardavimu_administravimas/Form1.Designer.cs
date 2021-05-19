@@ -34,6 +34,8 @@ namespace Pardavimu_administravimas
             this.uzrasasAgentura = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pridetiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pridėtiDarbuotojąToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pridėtiKelioniųKryptįToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aprašymasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontaktaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,11 +46,9 @@ namespace Pardavimu_administravimas
             this.Country = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.formuotiAts = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.pridėtiDarbuotojąToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pridėtiKelioniųKryptįToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,6 +93,20 @@ namespace Pardavimu_administravimas
             this.pridetiToolStripMenuItem.Name = "pridetiToolStripMenuItem";
             this.pridetiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.pridetiToolStripMenuItem.Text = "Pridėti...";
+            // 
+            // pridėtiDarbuotojąToolStripMenuItem
+            // 
+            this.pridėtiDarbuotojąToolStripMenuItem.Name = "pridėtiDarbuotojąToolStripMenuItem";
+            this.pridėtiDarbuotojąToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.pridėtiDarbuotojąToolStripMenuItem.Text = "Pridėti darbuotoją";
+            this.pridėtiDarbuotojąToolStripMenuItem.Click += new System.EventHandler(this.pridėtiDarbuotojąToolStripMenuItem_Click);
+            // 
+            // pridėtiKelioniųKryptįToolStripMenuItem
+            // 
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Name = "pridėtiKelioniųKryptįToolStripMenuItem";
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Text = "Pridėti kelionių kryptį";
+            this.pridėtiKelioniųKryptįToolStripMenuItem.Click += new System.EventHandler(this.pridėtiKelioniųKryptįToolStripMenuItem_Click);
             // 
             // aprašymasToolStripMenuItem
             // 
@@ -181,14 +195,15 @@ namespace Pardavimu_administravimas
             this.label1.TabIndex = 10;
             this.label1.Text = "0.0.2";
             // 
-            // button1
+            // formuotiAts
             // 
-            this.button1.Location = new System.Drawing.Point(12, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 41);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Suformuoti ataskaitą";
-            this.button1.UseVisualStyleBackColor = true;
+            this.formuotiAts.Location = new System.Drawing.Point(12, 235);
+            this.formuotiAts.Name = "formuotiAts";
+            this.formuotiAts.Size = new System.Drawing.Size(69, 41);
+            this.formuotiAts.TabIndex = 11;
+            this.formuotiAts.Text = "Suformuoti ataskaitą";
+            this.formuotiAts.UseVisualStyleBackColor = true;
+            this.formuotiAts.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -208,20 +223,6 @@ namespace Pardavimu_administravimas
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pridėtiDarbuotojąToolStripMenuItem
-            // 
-            this.pridėtiDarbuotojąToolStripMenuItem.Name = "pridėtiDarbuotojąToolStripMenuItem";
-            this.pridėtiDarbuotojąToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.pridėtiDarbuotojąToolStripMenuItem.Text = "Pridėti darbuotoją";
-            this.pridėtiDarbuotojąToolStripMenuItem.Click += new System.EventHandler(this.pridėtiDarbuotojąToolStripMenuItem_Click);
-            // 
-            // pridėtiKelioniųKryptįToolStripMenuItem
-            // 
-            this.pridėtiKelioniųKryptįToolStripMenuItem.Name = "pridėtiKelioniųKryptįToolStripMenuItem";
-            this.pridėtiKelioniųKryptįToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.pridėtiKelioniųKryptįToolStripMenuItem.Text = "Pridėti kelionių kryptį";
-            this.pridėtiKelioniųKryptįToolStripMenuItem.Click += new System.EventHandler(this.pridėtiKelioniųKryptįToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,7 +230,7 @@ namespace Pardavimu_administravimas
             this.ClientSize = new System.Drawing.Size(1016, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.formuotiAts);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Country);
@@ -270,7 +271,7 @@ namespace Pardavimu_administravimas
         private System.Windows.Forms.Label Country;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button formuotiAts;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem pridetiToolStripMenuItem;

@@ -218,5 +218,11 @@ namespace Pardavimu_administravimas
             cmbAgentas.Close();
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 ataskFormavimas = new Form5();
+            ataskFormavimas.ShowDialog();
+        }
     }
 }

@@ -36,7 +36,6 @@ E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\
 E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\bin\Debug\Pardavimu_administravimas.pdb
 E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csprojAssemblyReference.cache
 E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form1.resources
-E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.popupForm.resources
 E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.LoginApp.resources
 E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Properties.Resources.resources
 E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.csproj.GenerateResource.cache
@@ -144,3 +143,7 @@ C:\Users\gedas\Documents\GitHub\pardavimu-administravimo-programa\Pardavimu_admi
 C:\Users\gedas\Documents\GitHub\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.exe
 C:\Users\gedas\Documents\GitHub\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.pdb
 C:\Users\gedas\Documents\GitHub\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form4.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form2.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form3.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form4.resources
+E:\github\rabadonis\pardavimu-administravimo-programa\Pardavimu_administravimas\obj\Debug\Pardavimu_administravimas.Form5.resources

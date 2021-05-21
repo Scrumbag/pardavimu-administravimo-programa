@@ -37,7 +37,7 @@ namespace Pardavimu_administravimas
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 39);
+            this.textBox1.Location = new System.Drawing.Point(103, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 0;
@@ -46,7 +46,7 @@ namespace Pardavimu_administravimas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 42);
+            this.label1.Location = new System.Drawing.Point(55, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 2;
@@ -54,7 +54,7 @@ namespace Pardavimu_administravimas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(61, 87);
+            this.button1.Location = new System.Drawing.Point(103, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 32);
             this.button1.TabIndex = 4;
@@ -66,7 +66,7 @@ namespace Pardavimu_administravimas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 160);
+            this.ClientSize = new System.Drawing.Size(283, 141);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);

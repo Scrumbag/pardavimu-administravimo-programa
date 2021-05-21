@@ -16,5 +16,23 @@ namespace Pardavimu_administravimas
         {
             InitializeComponent();
         }
+
+        private void klientubutton_Click(object sender, EventArgs e)
+        {
+            Form1 klientuAt = new Form1();
+            klientuAt.klientuAtaskaita();
+        }
+
+        private void darbuotojubutton_Click(object sender, EventArgs e)
+        {
+            Form1 darbuotojuAt = new Form1();
+            darbuotojuAt.darbuotojuAtaskaita();
+        }
+
+        private void kryptisbutton_Click(object sender, EventArgs e)
+        {
+            Form1 krypciuAt = new Form1();
+            krypciuAt.krypciuAtaskaita();
+        }
     }
 }

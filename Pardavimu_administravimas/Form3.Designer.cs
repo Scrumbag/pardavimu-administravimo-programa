@@ -155,7 +155,7 @@ namespace Pardavimu_administravimas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 313);
+            this.ClientSize = new System.Drawing.Size(283, 264);
             this.Controls.Add(this.pridetiAgentaB);
             this.Controls.Add(this.PelnasL);
             this.Controls.Add(this.pardavimuKiekisL);

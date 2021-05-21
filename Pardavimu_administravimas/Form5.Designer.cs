@@ -39,7 +39,7 @@ namespace Pardavimu_administravimas
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(12, 24);
+            this.title.Location = new System.Drawing.Point(11, 24);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(272, 29);
             this.title.TabIndex = 0;
@@ -47,36 +47,39 @@ namespace Pardavimu_administravimas
             // 
             // klientubutton
             // 
-            this.klientubutton.Location = new System.Drawing.Point(27, 65);
+            this.klientubutton.Location = new System.Drawing.Point(21, 65);
             this.klientubutton.Name = "klientubutton";
             this.klientubutton.Size = new System.Drawing.Size(72, 64);
             this.klientubutton.TabIndex = 1;
             this.klientubutton.Text = "Klientų ataskaita";
             this.klientubutton.UseVisualStyleBackColor = true;
+            this.klientubutton.Click += new System.EventHandler(this.klientubutton_Click);
             // 
             // darbuotojubutton
             // 
-            this.darbuotojubutton.Location = new System.Drawing.Point(105, 65);
+            this.darbuotojubutton.Location = new System.Drawing.Point(110, 65);
             this.darbuotojubutton.Name = "darbuotojubutton";
             this.darbuotojubutton.Size = new System.Drawing.Size(72, 64);
             this.darbuotojubutton.TabIndex = 2;
             this.darbuotojubutton.Text = "Darbuotojų ataskaita";
             this.darbuotojubutton.UseVisualStyleBackColor = true;
+            this.darbuotojubutton.Click += new System.EventHandler(this.darbuotojubutton_Click);
             // 
             // kryptisbutton
             // 
-            this.kryptisbutton.Location = new System.Drawing.Point(183, 65);
+            this.kryptisbutton.Location = new System.Drawing.Point(199, 65);
             this.kryptisbutton.Name = "kryptisbutton";
             this.kryptisbutton.Size = new System.Drawing.Size(72, 64);
             this.kryptisbutton.TabIndex = 3;
             this.kryptisbutton.Text = "Krypčių ataskaita";
             this.kryptisbutton.UseVisualStyleBackColor = true;
+            this.kryptisbutton.Click += new System.EventHandler(this.kryptisbutton_Click);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 145);
+            this.ClientSize = new System.Drawing.Size(294, 165);
             this.Controls.Add(this.kryptisbutton);
             this.Controls.Add(this.darbuotojubutton);
             this.Controls.Add(this.klientubutton);

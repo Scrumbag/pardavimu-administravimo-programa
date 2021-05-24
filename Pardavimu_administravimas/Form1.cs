@@ -298,7 +298,7 @@ namespace Pardavimu_administravimas
             }
         }
 
-        public void darbuotojuAtaskaita()
+        public void darbuotojuAtaskaita(string dateFrom, string dateTo)
         {
             try
             {
@@ -320,6 +320,7 @@ namespace Pardavimu_administravimas
                                   "SUM(KELIONE.kaina_keleiviui * KELIONE.keleiviu_kiekis) AS 'Pelnas'," +
                                   "COUNT(KELIONE.id_KELIONE) AS 'Pardavimų skaičius' " +
                            "FROM DARBUOTOJAS INNER JOIN KELIONE ON DARBUOTOJAS.id_DARBUOTOJAS = KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS " +
+                           "WHERE KELIONE.data>='" + dateFrom + "'" + " AND KELIONE.data<'" + dateTo + "' " +
                            "GROUP BY DARBUOTOJAS.id_DARBUOTOJAS ORDER BY `Pelnas` DESC";
                 cmd = new MySqlCommand(query, con);
                 adapter.SelectCommand = cmd;

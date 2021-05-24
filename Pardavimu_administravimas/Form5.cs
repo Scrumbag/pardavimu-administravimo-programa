@@ -25,8 +25,10 @@ namespace Pardavimu_administravimas
 
         private void darbuotojubutton_Click(object sender, EventArgs e)
         {
-            Form1 darbuotojuAt = new Form1();
-            darbuotojuAt.darbuotojuAtaskaita();
+            Form6 sudarymui = new Form6();
+            sudarymui.ShowDialog();
+            //Form1 darbuotojuAt = new Form1();
+            //darbuotojuAt.darbuotojuAtaskaita();
         }
 
         private void kryptisbutton_Click(object sender, EventArgs e)

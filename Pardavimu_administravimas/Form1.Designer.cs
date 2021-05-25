@@ -81,7 +81,7 @@ namespace Pardavimu_administravimas
             this.pagalbaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1016, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1121, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -195,7 +195,7 @@ namespace Pardavimu_administravimas
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "0.0.2";
+            this.label1.Text = "0.0.3";
             // 
             // formuotiAts
             // 
@@ -212,7 +212,7 @@ namespace Pardavimu_administravimas
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(176, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(828, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(933, 410);
             this.dataGridView1.TabIndex = 12;
             // 
             // button2
@@ -229,7 +229,7 @@ namespace Pardavimu_administravimas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 450);
+            this.ClientSize = new System.Drawing.Size(1121, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.formuotiAts);

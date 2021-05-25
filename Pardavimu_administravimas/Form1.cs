@@ -39,7 +39,7 @@ namespace Pardavimu_administravimas
         private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string pagalba = "Programos naudojimas:\n\n" +
-                             "• Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus.\n• Naudojant paieškos lauką galima surasti informaciją apie keliones pagal nurodytą data.\n• Lentelę taip pat galima filtruoti pagal klientą, agentą ir kryptį naudojant pasirinkimus lentelės kairėje.\n• Norint išvalyti filtravimą spauskite 'Kelionių duomenys' mygtuką.\n• Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką ir iššokusioje formoje pasirinkite kokią ataskaitą formuoti norite.\n• Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n• Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
+                             "• Lentelę galima surikiuoti pagal kiekvieną iš lentelės stulpelių ant jo paspaudus.\n• Naudojant paieškos lauką galima surasti informaciją apie keliones pagal nurodytą data.\n• Lentelę taip pat galima filtruoti pagal klientą, agentą ir kryptį naudojant pasirinkimus lentelės kairėje.\n• Norint išvalyti filtravimą spauskite 'Kelionių duomenys' mygtuką.\n• Norint suformuoti ataskaitą spauskite 'Suformuoti ataskaitą' mygtuką ir iššokusioje formoje pasirinkite kokią ataskaitą formuoti norite.\n• Norint pridėti darbuotoją ar kelionių kryptį, spauskite meniu punktą pridėti ir pasirinkite. Pridėjus duomenį spausti mygtuką 'Kelionių duomenys' tam, kad atsinaujintų duomenų atvaizdavimas.\n• Daugiau apie programą galite sužinoti paspaudę 'Aprašymas' meniu punktą.\n• Daugiau apie programos autorius galite sužinoti paspaudę 'Kontaktai' meniu punktą.";
             MessageBox.Show(pagalba, "Pagalba");
         }
 
@@ -63,7 +63,8 @@ namespace Pardavimu_administravimas
                                   "KELIONE.miestas AS Miestas," +
                                   "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
                                   "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
-                                  "KELIONE.data AS Data," +
+                                  "KELIONE.data AS 'Kelionės data'," +
+                                  "KELIONE.uzsakymo_data AS 'Užsakymo data'," +
                                   "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
                                   "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas " +
                            "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +
@@ -108,9 +109,10 @@ namespace Pardavimu_administravimas
             string pavarde = pasirinkiteAgenta.GetItemText(this.pasirinkiteAgenta.SelectedItem);
             string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
                                   "KELIONE.miestas AS Miestas," +
-                                  "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                  "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
                                   "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
-                                  "KELIONE.data AS Data," +
+                                  "KELIONE.data AS 'Kelionės data'," +
+                                  "KELIONE.uzsakymo_data AS 'Užsakymo data'," +
                                   "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
                                   "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas," +
                                   "KELIONES_KRYPTIS.salis AS Šalis " +
@@ -138,9 +140,10 @@ namespace Pardavimu_administravimas
             string pavarde = pasirinkiteKlienta.GetItemText(this.pasirinkiteKlienta.SelectedItem);
             string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
                                   "KELIONE.miestas AS Miestas," +
-                                  "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                  "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
                                   "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
-                                  "KELIONE.data AS Data," +
+                                  "KELIONE.data AS 'Kelionės data'," +
+                                  "KELIONE.uzsakymo_data AS 'Užsakymo data'," +
                                   "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
                                   "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas," +
                                   "KELIONES_KRYPTIS.salis AS Šalis " +
@@ -168,9 +171,10 @@ namespace Pardavimu_administravimas
             string salis = pasirinkiteKrypti.GetItemText(this.pasirinkiteKrypti.SelectedItem);
             string query = "SELECT KELIONE.id_KELIONE AS Numeris," +
                                   "KELIONE.miestas AS Miestas," +
-                                  "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                  "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
                                   "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
-                                  "KELIONE.data AS Data," +
+                                  "KELIONE.data AS 'Kelionės data'," +
+                                  "KELIONE.uzsakymo_data AS 'Užsakymo data'," +
                                   "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
                                   "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas," +
                                   "KELIONES_KRYPTIS.salis AS Šalis " +
@@ -192,6 +196,9 @@ namespace Pardavimu_administravimas
             pasirinkiteKlienta.ResetText();
             pasirinkiteAgenta.ResetText();
             pasirinkiteKrypti.ResetText();
+            pasirinkiteKlienta.Items.Clear();
+            pasirinkiteAgenta.Items.Clear();
+            pasirinkiteKrypti.Items.Clear();
             dataGridView1.DataSource = GetList();
         }
 
@@ -320,7 +327,7 @@ namespace Pardavimu_administravimas
                                   "SUM(KELIONE.kaina_keleiviui * KELIONE.keleiviu_kiekis) AS 'Pelnas'," +
                                   "COUNT(KELIONE.id_KELIONE) AS 'Pardavimų skaičius' " +
                            "FROM DARBUOTOJAS INNER JOIN KELIONE ON DARBUOTOJAS.id_DARBUOTOJAS = KELIONE.fk_DARBUOTOJASid_DARBUOTOJAS " +
-                           "WHERE KELIONE.data>='" + dateFrom + "'" + " AND KELIONE.data<'" + dateTo + "' " +
+                           "WHERE KELIONE.uzsakymo_data>='" + dateFrom + "'" + " AND KELIONE.uzsakymo_data<'" + dateTo + "' " +
                            "GROUP BY DARBUOTOJAS.id_DARBUOTOJAS ORDER BY `Pelnas` DESC";
                 cmd = new MySqlCommand(query, con);
                 adapter.SelectCommand = cmd;
@@ -440,9 +447,10 @@ namespace Pardavimu_administravimas
             string query = "    SELECT KELIONE.id_KELIONE AS Numeris," +
                                       "KELIONES_KRYPTIS.salis AS Šalis," +
                                       "KELIONE.miestas AS Miestas," +
-                                      "KELIONE.kaina_keleiviui AS 'Kaina keleiviui'," +
+                                      "KELIONE.kaina_keleiviui AS 'Bilieto kaina'," +
                                       "KELIONE.keleiviu_kiekis AS 'Keleivių kiekis'," +
-                                      "KELIONE.data AS Data," +
+                                      "KELIONE.data AS 'Kelionės data'," +
+                                      "KELIONE.uzsakymo_data AS 'Užsakymo data'," +
                                       "CONCAT(DARBUOTOJAS.vardas, ' ', DARBUOTOJAS.pavarde) AS Agentas," +
                                       "CONCAT(KLIENTAS.vardas, ' ', KLIENTAS.pavarde) AS Klientas " +
                                "FROM KELIONE INNER JOIN KELIONES_KRYPTIS ON KELIONE.fk_KELIONES_KRYPTISid_KELIONES_KRYPTIS = KELIONES_KRYPTIS.id_KELIONES_KRYPTIS " +

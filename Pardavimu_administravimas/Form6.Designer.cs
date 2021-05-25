@@ -73,7 +73,7 @@ namespace Pardavimu_administravimas
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
             this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 5, 24, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2021, 3, 1, 0, 0, 0, 0);
             // 
             // dateTimePicker2
             // 
@@ -81,7 +81,7 @@ namespace Pardavimu_administravimas
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(128, 20);
             this.dateTimePicker2.TabIndex = 6;
-            this.dateTimePicker2.Value = new System.DateTime(2021, 5, 24, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2021, 6, 1, 0, 0, 0, 0);
             // 
             // Form6
             // 

@@ -18,7 +18,6 @@ namespace Pardavimu_administravimas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginApp());
-            //Application.Run(new Form1());
         }
     }
 }
